@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <title>everis FullStack Developer</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso Full Stack Developer Everis, Everis, Angular, Html 5, ES6, Typescript">
+    <meta name="author" content="Klauder Felipe Dias">    
+    <link rel="shortcut icon" href="assets/images/favicon-everis-full-stack-developer.ico">  
+    
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
+      
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+    
+</head> 
+
+<body class="body-green">
+    <div class="page-wrapper">
+        
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight"></span><span class="text-bold">Informações</span>
+                        </a>
+                    </h1>
+                    
+                </div><!--//branding-->
+                
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Início: 30/10/2020</li>
+                    <li class="breadcrumb-item">Término: 12/01/2021</li>
+                </ol>
+                
+            </div><!--//container-->
+        </header><!--//header-->
+
+        <div class="doc-wrapper">
+            <div class="container">
+
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title">Everis FullStack Developer</h1>
+                    <div class="meta">Autor: Klauder Dias <i class="far fa-clock"></i>, Last updated: Nov 08th, 2020</div>
+                </div><!--//doc-header-->
+
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+
+                            <section id="lp-section" class="doc-section">
+                                <h2 class="section-title">Lógica de programação essencial</h2>
+                                <div class="section-block">
+                                    <p>Lógica de programação é a forma como o desenvolvedor entende a comunicação a fim de programar uma função de um programa. Faz uso de algoritmos, que são sequências de passos bem estabelecidos, como por exemplo, uma receita de bolo. </p>                                    
+                                </div>
+                            </section><!--//lp-section-->
+
+                            <section id="git-github-section" class="doc-section">
+                                <h2 class="section-title">Introdução Git/GitHub</h2>
+
+                                <div id="step1"  class="section-block">
+                                    <p>Como funciona o Git/Github e como ele pode simplificar o seu trabalho.</p>
+                                    <h3 class="block-title">SHA-1</h3>
+                                    <p>
+                                        O SHA-1 é uma função hash criptográfica projetada pela Agência de Segurança Nacional dos Estados Unidos que produz um valor de dispersão de 160 bits (20 bytes) conhecido como resumo da mensagem. Um valor de dispersão SHA-1 é normalmente tratado como um número hexadecimal de 40 dígitos.
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Exemplo:</h6>
+                                        <p><code>echo 'conteudo' | git hash-object --stdin</code></p>
+                                        <p>SHA-1: fc31e91b26cf85a55e072476de7f263c89260eb1</p>
+                                        <p><code>echo -e 'blob 9\0conteudo' | openssl sha1  //tipo blob, tamanho do arquivo=9, datos do arquivo=conteudo</code></p>
+                                        <p>SHA-1: 65b0d0dda479cc03cce59528e28961e498155f5c</p>
+                                    </div><!--//code-block-->
+
+                                </div><!--//section-block-->
+
+                                <div id="step2"  class="section-block">
+                                    <h3 class="block-title">Objetos internos do Git</h3>
+                                    <p>Entendendo o Git funciona por de baixo dos panos. No Git temos os 03 tipos:</p>
+
+                                    <ul class="list">
+                                        <li><span class="font-weight-bold">BLOB</span> - contem apenas o SHA-1 e tamanho do arquivo.</li>
+                                        <li><span class="font-weight-bold">TREE</span> - É responsavel por montar toda a estrutura de onde estão os arquivos, incluindo o nome do arquivo  <span class="font-italic"> que não está no BLOB</span>. As árvores podem apontar para BLOBS e/ou outras TREEs.</li>
+                                        <li><span class="font-weight-bold">COMMIT</span> - Mais importante de tudo. Aponta para uma árvore, parente (último commit), autor, mensagem, timestamp (carimbo de tempo).</li>                                        
+                                    </ul>                                    
+                                </div><!--//section-block-->
+                                
+                                <div id="step3"  class="section-block">
+                                    <h3 class="block-title">Clico de vida dos arquivos</h3>
+                                    <p>
+                                        Os arquivos do Git podem ser rastreáveis (Tracked) e não-rastreáveis (Untracked).                                        
+                                        Os arquivos <span class="font-weight-bold font-italic">Tracked</span> estão subdivididos em 03 estados:
+                                    </p>
+                                    
+                                    <ol class="list">
+                                        <li><span class="font-weight-bold">Unmodified</span> - São os arquivos que não sofreram alterações.</li>
+                                        <li><span class="font-weight-bold">Modified</span> - São os arquivos que estavam no estado Unmodified e foram modificados.</li>
+                                        <li><span class="font-weight-bold">Staged</span> - São os arquivos que estão se preparando para fazer parte de outro tipo de agrupamento (commit).</li>
+                                    </ol>     
+                                    
+                                </div><!--//section-block-->
+                                
+                                <div id="step4"  class="section-block">
+                                    <h3 class="block-title">Comandos Git</h3>
+                                    <p>
+                                        Lista dos comandos mais utilizados no Git.
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Exemplos:</h6>
+                                        <ul class="list">
+                                            <li>
+                                                <p> 
+                                                    <span class="text-bold">git config --list</span> - Exibe as configurações atuais git
+                                                </p>
+                                                <p>
+                                                    <code>git config --list </code>  <br/>
+                                                </p>
+                                                <p>
+                                                    <code>git config --global user.name "King Kong" // altera o valor de uma configuração  </code>   
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p> 
+                                                    <span class="text-bold">git status</span> - Exibe o estado atual de cada arquivo (Untracked, Unmodified, Modified, Staged).
+                                                </p>
+                                                <p>
+                                                    <code>git status </code>    
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p> 
+                                                    <span class="text-bold">git clone</span> - Clona um reposótio Git.
+                                                </p>
+                                                <p>
+                                                    <code>git clone https://github.com/python/cpython.git</code>    
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p> 
+                                                    <span class="text-bold">git remote /? </span> - Exibe todas possibilidades de comandos válidos para o servidor remoto.
+                                                </p>
+                                                <p>
+                                                    <code>git remote -v  // exist as informações do servidor remoto </code> <br />
+                                                </p>
+                                                <p>
+                                                    <code>git remote add origin https://github.com/klauder/livro-receitas.git // vincula o repositório local ao servidor remoto informado</code>   
+                                                </p>
+                                                <p>
+                                                    <code>git remote rename old_name new_name // altera o nome do servidor remoto</code>   
+                                                </p>
+                                                <p>
+                                                    <code>git remote remove name // remove o servidor remoto</code>   
+                                                </p>
+                                            </li>                                              
+                                            <li>
+                                                <p> 
+                                                    <span class="text-bold">git pull</span> - Faz o download de todos os arquivos do servidor remoto para o repositório local.
+                                                </p>
+                                                <p>
+                                                    <code>git pull origin master</code>    
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p> 
+                                                    <span class="text-bold">git push</span> - Envia os arquivos alterados para o servidor remoto.
+                                                </p>
+                                                <p>
+                                                    <code>git push origin master</code>    
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <span class="text-bold">git init</span> - Cria-se um repositório do Git dentro da pasta selecionada.
+                                                </p>
+                                                <p>
+                                                    <code>git init </code>    
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p> 
+                                                    <span class="text-bold">git add</span> - Move o/os arquivo(s) para o estado Staged para dar início ao versionamento do código.
+                                                </p>
+                                                <p>
+                                                    <code>git add * //move todos os arquivos</code> <br />
+                                                </p>
+                                                <p>
+                                                    <code>git add my-file.ts another-file.js // move arquivos específicos</code>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p> 
+                                                    <span class="text-bold">git commit</span> - Criar o commit com as alterações realizadas nos arquivos.                                                                                          
+                                                </p>
+                                                <p>
+                                                    <code>git commit -m "Mensagem do commit"</code>   
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        
+                                    </div><!--//code-block-->
+
+                                </div><!--//section-block-->
+
+                            </section><!--//git-github-section-->
+                            
+                            <section id="html-css-section" class="doc-section">
+                                <h2 class="section-title">HTML5 e CSS3</h2>
+                                <div class="section-block">
+                                    <p>
+                                        Como funciona a estrutura básica dessas tecnologias, sua semântica, principais elementos e comandos.
+                                        No html pode conter somente uma tag <span class="font-weight-bold">H1</span> por página.
+                                    </p>
+                                </div><!--//section-block-->
+
+                                <div id="html" class="section-block">                                    
+                                    <div class="code-block">
+                                        <h6>Exemplo código HTML</h6>
+<pre><code class="language-markup">&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html lang=&#x22;pt-br&#x22;&#x3E;
+    &#x3C;head&#x3E;
+    &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
+    &#x3C;title&#x3E;T&#xED;tulo ...&#x3C;/title&#x3E;
+    &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;style.css&#x22; &#x3E;
+    &#x3C;/head&#x3E;
+    &#x3C;body class=&#x22;jumbotron&#x22;&#x3E;
+    &#x3C;header&#x3E;
+        &#x3C;h1&#x3E;...&#x3C;/h1&#x3E;
+    &#x3C;/header&#x3E;
+    &#x3C;section&#x3E;
+        &#x3C;header&#x3E;
+        &#x3C;h2&#x3E;...&#x3C;/h2&#x3E;
+        &#x3C;/header&#x3E;
+        &#x3C;article&#x3E;
+        &#x3C;header&#x3E;
+            &#x3C;h3&#x3E;..&#x3C;/h3&#x3E;
+        &#x3C;/header&#x3E;
+        &#x3C;p&#x3E; ...&#x9;&#x3C;/p&#x3E;
+        &#x3C;ol&#x3E;
+            &#x3C;li&#x3E;..&#x3C;/li&#x3E;
+        &#x3C;/ol&#x3E;
+        &#x3C;ul&#x3E;
+            &#x3C;li&#x3E;Google&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;Email&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;/ul&#x3E;
+        &#x3C;/article&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;footer&#x3E;
+        Rodap&#xE9;&#x9;&#x9;&#x9;
+    &#x3C;/footer&#x3E;
+    &#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;main.js&#x22;&#x3E;&#x3C;/script&#x3E;       
+    &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;</code>
+</pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+
+                                <div id="css" class="section-block">
+                                    <div class="code-block">
+                                        <h6>Exemplo código CSS</h6>
+                                        <pre><code class="language-css">/* ======= Base Styling ======= */
+body {
+    font-family: 'Open Sans', arial, sans-serif; 
+    color: #333; 
+    font-size: 16px; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+
+                            </section><!--//html-css-section-->
+
+                            <section id="instagram-section" class="doc-section">
+                                <h2 class="section-title">Recriando tela do Instagram</h2>
+                                <div class="section-block">
+                                    <p>
+                                        Página de login do Instagram: nesse projeto, será abordado o conceito sobre CSS Flexbox e responsividade, preparando os alunos para as aulas de jogos, nas quais será utilizado o CSS junto ao JavaScript para estilização e posicionamento.
+
+                                        
+                                    </p>
+
+                                    <p>
+                                        <a href="https://github.com/klauder/dio-instagram" target="_blank">Ver projeto Github</a>
+                                    </p>
+                                </div>
+
+                                <div class="section-block">
+                                    <div class="callout-block callout-info">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-info-circle"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Aenean imperdiet</h4>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <code>&lt;code&gt;</code> , Nemo enim ipsam voluptatem quia voluptas <a href="#">link example</a> sit aspernatur aut odit aut fugit.</p>
+                                        </div><!--//content-->
+                                    </div><!--//callout-block-->
+                                    
+                                    <div class="callout-block callout-warning">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-bug"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Morbi posuere</h4>
+                                            <p>Nunc hendrerit odio quis dignissim efficitur. Proin ut finibus libero. Morbi posuere fringilla felis eget sagittis. Fusce sem orci, cursus in tortor <a href="#">link example</a> tellus vel diam viverra elementum.</p>
+                                        </div><!--//content-->
+                                    </div><!--//callout-block-->
+                                    
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-thumbs-up"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Lorem ipsum dolor sit amet</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Link example</a> aenean commodo ligula eget dolor.</p>
+                                        </div><!--//content-->
+                                    </div><!--//callout-block-->
+                                    
+                                    <div class="callout-block callout-danger">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Interdum et malesuada</h4>
+                                            <p>Morbi eget interdum sapien. Donec sed turpis sed nulla lacinia accumsan vitae ut tellus. Aenean vestibulum <a href="#">Link example</a> maximus ipsum vel dignissim. Morbi ornare elit sit amet massa feugiat, viverra dictum ipsum pellentesque. </p>
+                                        </div><!--//content-->
+                                    </div><!--//callout-block-->
+                                </div>
+                            </section><!--//instagram-section-->
+
+                            <section id="dicas-section" class="doc-section">
+                                <h2 class="section-title">Dicas</h2>
+                                <div class="section-block">
+                                    <ul>
+                                        <li>
+                                            <a href="https://developer.mozilla.org/pt-BR/" target="_blank">Ajuda CSS </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://mothereff.in/html-entities" target="_blank">HTML entity encoder/decoder </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/pulse/todos-os-atalhos-do-vs-code-mateus-barbosa/" target="_blank">Atalhos VS Code</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://tinypng.com/" target="_blank">Retirar meta dados imagens</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section><!--//dicas-section-->
+
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+	                        
+	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+	                                <a class="nav-link scrollto" href="#doc-section">Lógica Programação</a>
+	                                <a class="nav-link scrollto" href="#git-github-section">Git/GitHub</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#step1">SHA1</a>
+                                        <a class="nav-link scrollto" href="#step2">Como funciona</a>
+                                        <a class="nav-link scrollto" href="#step3">Ciclo vida dos arquivos</a>
+                                        <a class="nav-link scrollto" href="#step4">Comandos</a>
+                                    </nav><!--//nav-->
+	                                <a class="nav-link scrollto" href="#html-css-section">HTML5 /CSS3</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#html">HTML</a>
+                                        <a class="nav-link scrollto" href="#css">CSS</a>
+                                    </nav><!--//nav-->
+	                                <a class="nav-link scrollto" href="#callouts-section">Instagram</a>
+	                                <a class="nav-link scrollto" href="#dicas-section">Dicas</a>
+	                            </nav><!--//doc-menu-->
+	                        
+                        </div>
+                    </div><!--//doc-sidebar-->
+
+                </div><!--//doc-body-->   
+
+            </div><!--//container-->
+            
+        </div><!--//doc-wrapper-->
+        
+        <div id="promo-block" class="promo-block">
+            <div class="container">
+                <div class="promo-block-inner">
+                    <h3 class="promo-title text-center"><i class="fas fa-heart"></i> <a href="https://themes.3rdwavemedia.com/bootstrap-templates/portfolio/instance-bootstrap-portfolio-theme-for-developers/" target="_blank">Are you an ambitious and entrepreneurial developer?</a></h3>
+                    <div class="row">
+                        <div class="figure-holder col-lg-5 col-md-6 col-12">
+                            <div class="figure-holder-inner">
+                                <a href="https://themes.3rdwavemedia.com/bootstrap-templates/portfolio/instance-bootstrap-portfolio-theme-for-developers/" target="_blank"><img class="img-fluid" src="assets/images/demo/instance-promo.jpg" alt="Instance Theme" /></a>
+                                <a class="mask" href="https://themes.3rdwavemedia.com/bootstrap-templates/portfolio/instance-bootstrap-portfolio-theme-for-developers/"><i class="icon fa fa-heart pink"></i></a>
+                                
+                            </div>
+                        </div><!--//figure-holder-->
+                        <div class="content-holder col-lg-7 col-md-6 col-12">
+                            <div class="content-holder-inner">
+                                <div class="desc">
+                                    <h4 class="content-title"><strong> Instance - Bootstrap 4 Portfolio Theme for Aspiring Developers</strong></h4>
+                                    <p>Check out <a href="https://themes.3rdwavemedia.com/bootstrap-templates/portfolio/instance-bootstrap-portfolio-theme-for-developers/" target="_blank">Instance</a> - a Bootstrap personal portfolio theme I created for developers. The UX design is focused on selling a developer’s skills and experience to potential employers or clients, and has <strong class="highlight">all the winning ingredients to get you hired</strong>. It’s not only a HTML site template but also a marketing framework for you to <strong class="highlight">build an impressive online presence with a high conversion rate</strong>. </p>
+                                    <p><strong class="highlight">[Tip for developers]:</strong> If your project is Open Source, you can use this area to promote your other projects or hold third party adverts like Bootstrap and FontAwesome do!</p>
+                                    <a class="btn btn-cta" href="https://themes.3rdwavemedia.com/bootstrap-templates/portfolio/instance-bootstrap-portfolio-theme-for-developers/" target="_blank"><i class="fas fa-external-link-alt"></i> View Demo</a>
+                                    
+                                </div><!--//desc-->
+                                
+                                
+                                <div class="author"><a href="https://themes.3rdwavemedia.com">Xiaoying Riley</a></div>
+                            </div><!--//content-holder-inner-->
+                        </div><!--//content-holder-->
+                    </div><!--//row-->
+                </div><!--//promo-block-inner-->  
+            </div><!--//container-->
+        </div><!--//promo-block-->
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>      
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                             
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
